@@ -1,0 +1,102 @@
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library 'c++' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library 'System' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Performing C++ SOURCE FILE Test HAS_INTRIN_H failed with the following output:
+Change Dir: /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_66be2/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_66be2.dir/build.make CMakeFiles/cmTC_66be2.dir/build
+Building CXX object CMakeFiles/cmTC_66be2.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAS_INTRIN_H  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2 -std=gnu++17 -MD -MT CMakeFiles/cmTC_66be2.dir/src.cxx.o -MF CMakeFiles/cmTC_66be2.dir/src.cxx.o.d -o CMakeFiles/cmTC_66be2.dir/src.cxx.o -c /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx
+In file included from /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx:2:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/intrin.h:12:15: fatal error: 'intrin.h' file not found
+#include_next <intrin.h>
+              ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_66be2.dir/src.cxx.o] Error 1
+make: *** [cmTC_66be2/fast] Error 2
+
+
+Source file was:
+
+#include <intrin.h>
+int main() {
+    unsigned long lz = 0, v = 1234;
+    if (_BitScanReverse(&lz, v)) return lz;
+    return 0;
+} 
+Performing C++ SOURCE FILE Test HAVE_DECLSPEC_NOINLINE failed with the following output:
+Change Dir: /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_08985/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_08985.dir/build.make CMakeFiles/cmTC_08985.dir/build
+Building CXX object CMakeFiles/cmTC_08985.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE_DECLSPEC_NOINLINE  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2 -std=gnu++17 -MD -MT CMakeFiles/cmTC_08985.dir/src.cxx.o -MF CMakeFiles/cmTC_08985.dir/src.cxx.o.d -o CMakeFiles/cmTC_08985.dir/src.cxx.o -c /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx
+/Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx:1:1: error: '__declspec' attributes are not enabled; use '-fdeclspec' or '-fms-extensions' to enable support for __declspec attributes
+__declspec(noinline) void foo() { }
+^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_08985.dir/src.cxx.o] Error 1
+make: *** [cmTC_08985/fast] Error 2
+
+
+Source file was:
+__declspec(noinline) void foo() { }
+int main() { }
+Performing C++ SOURCE FILE Test HAVE__ALIGNED_MALLOC failed with the following output:
+Change Dir: /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f2ce9/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f2ce9.dir/build.make CMakeFiles/cmTC_f2ce9.dir/build
+Building CXX object CMakeFiles/cmTC_f2ce9.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DHAVE__ALIGNED_MALLOC  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2 -std=gnu++17 -MD -MT CMakeFiles/cmTC_f2ce9.dir/src.cxx.o -MF CMakeFiles/cmTC_f2ce9.dir/src.cxx.o.d -o CMakeFiles/cmTC_f2ce9.dir/src.cxx.o -c /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx
+/Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'malloc.h' file not found
+#include <malloc.h>
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_f2ce9.dir/src.cxx.o] Error 1
+make: *** [cmTC_f2ce9/fast] Error 2
+
+
+Source file was:
+
+#include <malloc.h>
+int main() { void * ptr = _aligned_malloc(1024, 32); }
+
+Performing C++ SOURCE FILE Test INT64_IS_OWN_TYPE failed with the following output:
+Change Dir: /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4cd21/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_4cd21.dir/build.make CMakeFiles/cmTC_4cd21.dir/build
+Building CXX object CMakeFiles/cmTC_4cd21.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -DINT64_IS_OWN_TYPE  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2 -std=gnu++17 -MD -MT CMakeFiles/cmTC_4cd21.dir/src.cxx.o -MF CMakeFiles/cmTC_4cd21.dir/src.cxx.o.d -o CMakeFiles/cmTC_4cd21.dir/src.cxx.o -c /Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx
+/Users/ibesora/workspace/pbrt/CMakeFiles/CMakeTmp/src.cxx:4:1: error: static assertion failed due to requirement '!std::is_same<long long, long long>::value'
+static_assert(!std::is_same<long, int64_t>::value && !std::is_same<long long, int64_t>::value);
+^                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_4cd21.dir/src.cxx.o] Error 1
+make: *** [cmTC_4cd21/fast] Error 2
+
+
+Source file was:
+
+#include <cstdint>
+#include <type_traits>
+static_assert(!std::is_same<long, int64_t>::value && !std::is_same<long long, int64_t>::value);
+int main() { }
+
