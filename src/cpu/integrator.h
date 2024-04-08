@@ -6,6 +6,7 @@ class Integrator {
     virtual void render() = 0;
     pstd::optional<ShapeIntersection> intersect(const Ray &ray,
                                                 float tMax = Infinity) const;
+    bool intersectP(const Ray &ray, float tMax = Infinity) const;
 
     // Integrator public members
     Primitive aggregate;
